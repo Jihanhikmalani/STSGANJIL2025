@@ -1,36 +1,34 @@
 
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Program Kehadiran Siswa</title>
-</head>
-<body>
-  <script>
-    // Minta input jumlah siswa
-    let jumlah = prompt("Masukkan jumlah siswa dalam kelas:");
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Jumlah Hari dalam Bulan</title>
+  </head>
+  <body>
+    <script>
+      bulan = prompt("Masukkan nama bulan");
 
-    // Ubah ke integer
-    jumlah = parseInt(jumlah);
+      if (bulan == "januari" || bulan == "maret" || bulan == "mei" ||
+          bulan == "juli" || bulan == "agustus" || bulan == "oktober" || bulan == "desember") {
+        
+        alert("Bulan ini memiliki 31 hari.");
+        console.log("Bulan ini memiliki 31 hari.");
 
-    // Daftar siswa yang tidak hadir
-    const tidakHadir = [3, 7, 12, 18];
+      } else if (bulan == "februari") {
+        
+        alert("Bulan ini memiliki 28 atau 29 hari.");
+        console.log("Bulan ini memiliki 28 atau 29 hari.");
 
-    // String untuk ditampilkan sekaligus di alert
-    let hasil = "";
+      } else if (bulan == "april" || bulan == "juni" || bulan == "september" || bulan == "november") {
+        
+        alert("Bulan ini memiliki 30 hari.");
+        console.log("Bulan ini memiliki 30 hari.");
 
-    for (let i = 1; i <= jumlah; i++) {
-      if (tidakHadir.includes(i)) {
-        console.log("Siswa ke-" + i + " TIDAK HADIR.");
-        hasil += "Siswa ke-" + i + " TIDAK HADIR.\n";
       } else {
-        console.log("Siswa ke-" + i + " hadir.");
-        hasil += "Siswa ke-" + i + " hadir.\n";
+        
+        alert("Nama bulan tidak valid.");
+        console.log("Nama bulan tidak valid.");
       }
-    }
-
-    // Tampilkan semua hasil dalam 1 alert
-    alert(hasil);
-  </script>
-</body>
+    </script>
+  </body>
 </html>
